@@ -1,0 +1,231 @@
+.footer {
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  background-color: #2a2a2a;
+  color: #ffffff;
+
+  // 1. Seção de Newsletter
+  .newsletter-section {
+    background-color: #2b1256; // Cor roxa escura idêntica ao design original
+    color: #ffffff;
+    padding: 40px 20px;
+
+    .newsletter-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+
+      .newsletter-text {
+        max-width: 450px;
+
+        h3 {
+          font-size: 20px;
+          font-weight: 700;
+          margin-bottom: 8px;
+          color: #ffffff;
+          text-transform: uppercase;
+        }
+
+        p {
+          font-size: 13px;
+          color: #d1d1d1;
+          line-height: 1.4;
+          margin: 0;
+        }
+      }
+
+      .newsletter-form {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        max-width: 650px;
+
+        .form-inputs-group {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          .input-row {
+            display: flex;
+            gap: 12px;
+            width: 100%;
+
+            @media (max-width: 768px) {
+              flex-direction: column;
+            }
+
+            input {
+              flex: 1;
+              height: 44px;
+              border-radius: 4px;
+              border: 1px solid #ffffff;
+              background-color: #ffffff;
+              padding: 0 16px;
+              font-size: 14px;
+              color: #3f3f3f;
+              outline: none;
+
+              &::placeholder {
+                color: #9c9c9c;
+              }
+
+              &:focus {
+                border-color: #f6c400;
+              }
+            }
+
+            .newsletter-btn {
+              background-color: #f6c400; // Botão amarelo característico
+              color: #3f3f3f;
+              border: none;
+              border-radius: 4px;
+              padding: 0 28px;
+              font-weight: 700;
+              font-size: 14px;
+              cursor: pointer;
+              transition: background-color 0.2s;
+              white-space: nowrap;
+              height: 44px;
+
+              &:hover {
+                background-color: #e5b400;
+              }
+            }
+          }
+
+          .terms-label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+            color: #ffffff;
+            cursor: pointer;
+
+            input[type="checkbox"] {
+              accent-color: #f6c400;
+              width: 14px;
+              height: 14px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // 2. Rodapé Principal
+  .footer-main {
+    padding: 60px 20px;
+    background-color: #f8f8f8; // Fundo cinzento claro correspondente ao design
+    color: #3f3f3f;
+
+    .footer-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-info {
+        .footer-logo-container {
+          img {
+            max-width: 160px;
+            height: auto;
+            display: block;
+          }
+        }
+
+        p {
+          font-size: 14px;
+          color: #707070;
+          line-height: 1.5;
+          margin-bottom: 24px;
+          max-width: 300px;
+        }
+
+        .social-links {
+          display: flex;
+          gap: 12px;
+
+          a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 50%;
+            color: #3f3f3f;
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: 700;
+            transition: all 0.2s;
+
+            &:hover {
+              background-color: #3014b8;
+              color: #ffffff;
+              border-color: #3014b8;
+              transform: translateY(-2px);
+            }
+          }
+        }
+      }
+
+      .footer-links {
+        h4 {
+          font-size: 14px;
+          font-weight: 700;
+          text-transform: uppercase;
+          margin-bottom: 20px;
+          color: #3f3f3f;
+          letter-spacing: 0.5px;
+        }
+
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 14px;
+
+          li {
+            a {
+              color: #707070;
+              text-decoration: none;
+              font-size: 14px;
+              transition: color 0.2s;
+
+              &:hover {
+                color: #3014b8;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // 3. Copyright inferior
+  .footer-bottom {
+    background-color: #f8f8f8;
+    border-top: 1px solid #eaeaea;
+    padding: 20px 20px;
+    text-align: center;
+
+    p {
+      font-size: 12px;
+      color: #9c9c9c;
+      margin: 0;
+    }
+  }
+}

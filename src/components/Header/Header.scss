@@ -1,0 +1,177 @@
+.site-header {
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+
+  // 1. Top Bar
+  .header-top-bar {
+    border-bottom: 1px solid #f0f0f0;
+    padding: 8px 20px;
+    background-color: #ffffff;
+
+    .top-bar-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      .top-bar-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 12px;
+        color: #9f9f9f;
+
+        strong {
+          color: #3014b8;
+        }
+
+        .top-bar-icon {
+          width: 18px;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  // 2. Main Header
+  .header-main {
+    padding: 16px 20px;
+    border-bottom: 1px solid #f0f0f0;
+
+    .header-main-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+
+      .logo-area {
+        .logo-img {
+          height: 40px;
+          width: auto;
+          display: block;
+        }
+      }
+
+      .search-bar {
+        flex: 1;
+        max-width: 600px;
+        display: flex;
+        align-items: center;
+        background-color: #f6f5f2;
+        border-radius: 10px;
+        padding: 4px 16px;
+
+        input {
+          width: 100%;
+          height: 40px;
+          border: none;
+          background: transparent;
+          outline: none;
+          font-size: 14px;
+          color: #3f3f3f;
+
+          &::placeholder {
+            color: #9f9f9f;
+          }
+        }
+
+        button {
+          background: transparent;
+          border: none;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+      .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        button {
+          background: transparent;
+          border: none;
+          cursor: pointer;
+          padding: 4px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: transform 0.2s;
+
+          &:hover {
+            transform: translateY(-2px);
+          }
+        }
+      }
+    }
+  }
+
+  // 3. Categories Bar
+  .header-categories {
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.03);
+
+    ul {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 20px;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @media (max-width: 768px) {
+        overflow-x: auto;
+        gap: 24px;
+        justify-content: flex-start;
+      }
+
+      li {
+        padding: 14px 0;
+        font-size: 12px;
+        font-weight: 600;
+        color: #9f9f9f;
+        cursor: pointer;
+        white-space: nowrap;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        transition: color 0.2s;
+
+        &:hover {
+          color: #3014b8;
+        }
+
+        // Destaque para Ofertas do Dia
+        &.active {
+          color: #3014b8;
+          font-weight: 700;
+        }
+
+        // Destaque para Assinatura com a Coroa alinhada perfeitamente
+        &.highlight {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          color: #9f9f9f;
+
+          .crown-icon {
+            width: 16px;
+            height: auto;
+            object-fit: contain;
+            display: block;
+          }
+
+          &:hover {
+            color: #3014b8;
+          }
+        }
+      }
+    }
+  }
+}

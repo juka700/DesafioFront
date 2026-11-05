@@ -1,0 +1,21 @@
+.categories-section {
+  width: 100%;
+  padding: 30px 0;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+
+  .categories-container {
+    max-width: 1280px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+
+    .categories-image {
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+}
